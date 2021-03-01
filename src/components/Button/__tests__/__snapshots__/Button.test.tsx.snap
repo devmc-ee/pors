@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render Button component matches the snapshot with value = 200 1`] = `
+<button
+  className="waves-effect waves-light btn-large btn-menu  btn-test-class"
+  data-value={200}
+  onClick={[MockFunction]}
+>
+  TestMe
+</button>
+`;

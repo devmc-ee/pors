@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {  useState } from 'react';
 import './App.css';
+import Button from './components/Button';
+import { NavBar } from './components/NavBar';
+import MainPage from './components/MainPage';
+import MenuItemButton from './components/MenuItemButton';
 
 function App() {
+  const [ value, setValue ] = useState<number>(0);
+  const handleClick = (id: number) => {
+    setValue(id);
+  }
+  const args= {
+    itemNumber: 1,
+    itemName: 'Braised Pork Noodle Soup',
+    itemPrice: '7€',
+    itemAddedQuantity: 0
+}
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <div className="container">
+        <MainPage keyboard={<div><MenuItemButton {...args}/><MenuItemButton {...args}/><MenuItemButton {...args}/></div>} customer={<>Cutomer</>} cart={<>cart</>} checkout={<>checkout</>} />
+      </div>
     </div>
   );
 }

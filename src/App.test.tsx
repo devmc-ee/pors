@@ -1,9 +1,20 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen} from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+const initRender = (props?: any) => render(<App {...props}/>);
+
+describe('Should render FrontPage', ()=>{
+  let component: any;
+  beforeEach(()=>{
+    component= initRender();
+    
+  })
+  test('should renders label text', () => {
+    const linkElement = screen.getByText(/selected id/i);
+    expect(linkElement).toBeInTheDocument();
+  });
+  
+
+  
+}) 
