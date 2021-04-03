@@ -7,5 +7,5 @@ export const NavBar = (): JSX.Element => {
                
             </div>
         </nav>
-    )
+    ) 
 }
