@@ -1,14 +1,18 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addToCartAction } from '../../redux/actions/orderActions';
 import { MenuItemButtonType } from '../../types/button';
+import {AppState} from '../../redux/rootReducer'
 import './styles/MenuItemButton.css';
 
 const MenuItemButton = ({  classes = '', code, name, price, currencySymbol }: MenuItemButtonType): JSX.Element => {
     const dispatch = useDispatch();
-    const addedAmount = 0;
-    const itemQtyAddedText = addedAmount === 0 ? addedAmount : 'x' + addedAmount;
-    const clickHandler = (code: string) => console.log(code)
-    return <button onClick={()=>dispatch(addToCartAction(code))} className={'menu-item container ' + classes + (addedAmount > 0? ' menu-item--active':'')}>
+    const {order} = useSelector(({order}: AppState) => order)
+    console.log('-',order);
+    
+    const itemQtyAddedText =  code in order ?   'x' +  order[code]: 0 ;
+    const clickHandler = (code: string) => dispatch(addToCartAction(code));
+
+    return <button onClick={()=>clickHandler(code)} className={'menu-item container ' + classes + (order[code] > 0? ' menu-item--active':'')}>
         <div className="menu-item__row row ">
             <div className="menu-item__number col s6">
                 {code} 
