@@ -1,22 +1,19 @@
-import React from 'react';
-import MenuItemButton, {IMenuItemButton} from '../'
+import MenuItemButton from '../'
 import { Meta, Story } from  '@storybook/react/types-6-0';
+import { CURRENCY } from '../../../dataSets/CURRENCY';
+import { MenuItemButtonType } from '../../../types/button';
 export default {
     title: 'MenuItemButton',
     component: MenuItemButton,
     args: {
-        itemNumber: 1,
-        itemName: 'Braised Pork Noodle Soup',
-        itemPrice: '7€',
-        itemAddedQuantity: 0
+        code: '1',
+        name: 'Braised Pork Noodle Soup',
+        price: 7,
+        currencySymbol: CURRENCY.EUR.symbol,
     }
 } as Meta; 
 
-const Template: Story<IMenuItemButton> = (args) => <MenuItemButton {...args} />;
+const Template: Story<MenuItemButtonType> = (args) => <MenuItemButton {...args} />;
 export const Default = Template.bind({});
 
 export const AddedOneItem = Template.bind({});
-AddedOneItem.args={
-    ...AddedOneItem.args,
-    itemAddedQuantity: 1
-}
