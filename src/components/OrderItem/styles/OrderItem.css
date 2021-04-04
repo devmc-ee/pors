@@ -1,0 +1,18 @@
+.order-item-btn {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 18px;
+    background-color: transparent;
+}
+.order-item-btn__value{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 141px;
+}
+.order-item-btn__text--bold{
+    font-weight: 700;
+    padding-bottom: 10px;
+}

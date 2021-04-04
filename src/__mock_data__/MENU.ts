@@ -33,3 +33,4 @@ export const MENU: ProductItem[] = [
         currencySymbol: CURRENCY.EUR.symbol,
     },
 ];
+export default MENU;
