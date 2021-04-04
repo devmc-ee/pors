@@ -13,8 +13,9 @@ function App() {
   const keyboard = MENU.map((item) => <MenuItemButton key={item.code} {...item} />);
   const { order } = useSelector(({ order }: AppState) => order);
   let orderList = [];
+
   for (let item in order) {
-    orderList.push(<div>{item}:{order[item]}</div>)
+    orderList.push(<div key={item}>{item}:{order[item]}</div>)
   }
 
   return (
