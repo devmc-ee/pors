@@ -1,4 +1,4 @@
-.cart-customer-card__btn{
+.cart-customer-card__btn {
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -7,10 +7,10 @@
     cursor: pointer;
     background-color: transparent;
 }
-.cart-customer-card__icon{
+.cart-customer-card__icon {
     font-size: 3rem;
     margin-right: 1rem;
 }
-.cart-customer-card__name{
+.cart-customer-card__name {
     font-weight: 700;
 }

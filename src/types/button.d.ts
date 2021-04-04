@@ -1,6 +1,5 @@
-import { ProductItem } from "./product";
+import { ProductItem } from './product';
 
 export type MenuItemButtonType = ProductItem & {
     classes?: string;
 };
-

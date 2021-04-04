@@ -1,23 +1,22 @@
-import AppActions from "../../types/redux/appActions";
-import OrderReducerStates from "../../types/redux/reducers/orderReducerStates";
-import { ORDER } from '../../dataSets/ACTION'
+import AppActions from '../../types/redux/appActions';
+import OrderReducerStates from '../../types/redux/reducers/orderReducerStates';
+import { ORDER } from '../../dataSets/ACTION';
 const initState: OrderReducerStates = {
-    order: {}
-}
+    order: {},
+};
 
-const orderReducer=(state = initState, action: AppActions)=>{
-
-    switch(action.type){
+const orderReducer = (state = initState, action: AppActions) => {
+    switch (action.type) {
         case ORDER.ADD_TO_CART:
             return {
                 ...state,
-                order:{
+                order: {
                     ...state.order,
-                    [action.payload]: state.order[action.payload]?state.order[action.payload] + 1:1,
-                }
-            }
+                    [action.payload]: state.order[action.payload] ? state.order[action.payload] + 1 : 1,
+                },
+            };
         default:
             return state;
     }
-}
+};
 export default orderReducer;

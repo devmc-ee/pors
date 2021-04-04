@@ -1,5 +1,5 @@
-import MenuItemButton from '../'
-import { Meta, Story } from  '@storybook/react/types-6-0';
+import MenuItemButton from '../';
+import { Meta, Story } from '@storybook/react/types-6-0';
 import { CURRENCY } from '../../../dataSets/CURRENCY';
 import { MenuItemButtonType } from '../../../types/button';
 export default {
@@ -10,8 +10,8 @@ export default {
         name: 'Braised Pork Noodle Soup',
         price: 7,
         currencySymbol: CURRENCY.EUR.symbol,
-    }
-} as Meta; 
+    },
+} as Meta;
 
 const Template: Story<MenuItemButtonType> = (args) => <MenuItemButton {...args} />;
 export const Default = Template.bind({});

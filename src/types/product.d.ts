@@ -1,9 +1,9 @@
-import { PriceType } from "./price";
+import { PriceType } from './price';
 
- export type ProductItem = PriceType &  {
+export type ProductItem = PriceType & {
     code: string;
     name: string;
-}
+};
 
 export interface Product extends ProductItem {
     id: number;

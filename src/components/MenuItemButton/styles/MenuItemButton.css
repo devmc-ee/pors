@@ -1,4 +1,4 @@
-.menu-item{
+.menu-item {
     padding: 10px 15px;
     width: 200px;
 }
@@ -9,7 +9,7 @@
     padding-bottom: 10px;
 }
 
-.menu-item__name{
+.menu-item__name {
     font-size: 1rem;
     font-weight: 700;
     text-align: right;
@@ -17,24 +17,24 @@
     max-width: 100px;
     overflow: hidden;
 }
-.menu-item__price{
+.menu-item__price {
     text-align: left;
 }
-.menu-item__number{
+.menu-item__number {
     font-weight: 700;
     font-size: 3rem;
     text-align: left;
     line-height: 3rem;
     width: 65px;
-}  
-.menu-item__row--footer{
+}
+.menu-item__row--footer {
     font-size: 1.3125rem;
     align-items: center;
 }
-.menu-item__quantity{
+.menu-item__quantity {
     text-align: right;
     font-size: 1rem;
-} 
-.menu-item--active{
-    background-color: #FAFFC0;
+}
+.menu-item--active {
+    background-color: #faffc0;
 }
