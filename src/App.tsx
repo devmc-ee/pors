@@ -1,23 +1,13 @@
-import './App.css';
 import MainPage from './components/MainPage';
 import MenuItemButton from './components/MenuItemButton';
 import { MENU } from './__mock_data__/MENU';
-import { useSelector } from 'react-redux';
-import { AppState } from './redux/rootReducer';
+import OrderList from './components/OrderList';
 import CustomerCartButton from './components/CustomerCartButton';
+
+import './App.css';
 
 function App(): JSX.Element {
     const keyboard = MENU.map((item) => <MenuItemButton key={item.code} {...item} />);
-    const { order } = useSelector(({ order }: AppState) => order);
-    const orderList = [];
-
-    for (const item in order) {
-        orderList.push(
-            <div key={item}>
-                {item}:{order[item]}
-            </div>,
-        );
-    }
 
     return (
         <div className="App ">
@@ -26,7 +16,7 @@ function App(): JSX.Element {
                     <MainPage
                         keyboard={<div>{keyboard}</div>}
                         customer={<CustomerCartButton />}
-                        order={<>{orderList}</>}
+                        order={<OrderList />}
                         checkout={<>checkout</>}
                     />
                 </div>
