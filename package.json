@@ -47,6 +47,8 @@
     ]
   },
   "devDependencies": {
+    "@iconify/icons-fluent": "^1.1.11",
+    "@iconify/react": "^1.1.4",
     "@storybook/addon-actions": "^6.1.15",
     "@storybook/addon-essentials": "^6.1.15",
     "@storybook/addon-links": "^6.1.15",

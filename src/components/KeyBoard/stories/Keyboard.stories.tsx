@@ -1,5 +1,3 @@
-import React from 'react';
-
 import KeyBoard, { KeyboardProps } from '../KeyBoard';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { CURRENCY } from '../../../dataSets/CURRENCY';
@@ -19,7 +17,7 @@ Default.args = {
         name: 'Braised Pork Noodle Soup',
         price: 7,
         currencySymbol: CURRENCY.EUR.symbol,
-    },
+    }, 
     { 
         code: '2',
         name: 'Braised Pork Noodle Soup',

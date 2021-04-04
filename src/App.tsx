@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="App">
 
-      <div className="container">
+      <div className="container-fluid">
         <MainPage
           keyboard={<div>{keyboard}</div>} customer={<CustomerCartButton />} order={<>{orderList}</>} checkout={<>checkout</>} />
       </div>

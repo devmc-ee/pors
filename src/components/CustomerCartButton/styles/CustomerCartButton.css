@@ -1,0 +1,16 @@
+.cart-customer-card__btn{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    cursor: pointer;
+    background-color: transparent;
+}
+.cart-customer-card__icon{
+    font-size: 3rem;
+    margin-right: 1rem;
+}
+.cart-customer-card__name{
+    font-weight: 700;
+}
