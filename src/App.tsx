@@ -20,14 +20,16 @@ function App(): JSX.Element {
     }
 
     return (
-        <div className="App">
-            <div className="container-fluid">
-                <MainPage
-                    keyboard={<div>{keyboard}</div>}
-                    customer={<CustomerCartButton />}
-                    order={<>{orderList}</>}
-                    checkout={<>checkout</>}
-                />
+        <div className="App ">
+            <div className="row">
+                <div className="col s12">
+                    <MainPage
+                        keyboard={<div>{keyboard}</div>}
+                        customer={<CustomerCartButton />}
+                        order={<>{orderList}</>}
+                        checkout={<>checkout</>}
+                    />
+                </div>
             </div>
         </div>
     );
