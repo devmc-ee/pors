@@ -12,7 +12,6 @@ const KeyBoard: KeyBoard = ({ menuData }: KeyboardProps) => {
 
     return menuData.length > 0 ? (
         <div className="keyboard">
-            {' '}
             {menuData.map((item, i) => (
                 <MenuItemButton key={i} {...item} />
             ))}

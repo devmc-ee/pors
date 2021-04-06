@@ -5,6 +5,9 @@
     align-items: flex-start;
     padding: 20px 18px;
     background-color: transparent;
+    margin-top: 1px;
+    border: 1px solid black;
+    cursor: pointer;
 }
 .order-item-btn__value{
     display: flex;

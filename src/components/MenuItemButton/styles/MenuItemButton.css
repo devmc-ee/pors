@@ -1,6 +1,9 @@
 .menu-item {
     padding: 10px 15px;
     width: 200px;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    border: 1px solid black;
 }
 .menu-item__row {
     display: flex;

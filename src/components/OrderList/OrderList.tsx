@@ -14,7 +14,7 @@ const OrderList = (): JSX.Element => {
             ...product[0],
             amount: order[item],
         };
-        orderList.unshift(<OrderItem key={item} {...args} />);
+        orderList.push(<OrderItem key={item} {...args} />);
     }
     return <> {orderList}</>;
 };
