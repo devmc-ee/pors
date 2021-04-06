@@ -1,8 +1,13 @@
 .main-page {
     display: grid;
     grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr auto;
+    height: 100%;
 }
 .main-page__cart-area {
     display: flex;
     flex-direction: column;
+}
+.main-page__order-area{
+    flex-grow: 1;
 }

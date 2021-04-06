@@ -10,17 +10,13 @@ function App(): JSX.Element {
     const keyboard = MENU.map((item) => <MenuItemButton key={item.code} {...item} />);
 
     return (
-        <div className="App ">
-            <div className="row">
-                <div className="col s12">
-                    <MainPage
-                        keyboard={<div>{keyboard}</div>}
-                        customer={<CustomerCartButton />}
-                        order={<OrderList />}
-                        checkout={<>checkout</>}
-                    />
-                </div>
-            </div>
+        <div className="App container-fluid">
+            <MainPage
+                keyboard={<div>{keyboard}</div>}
+                customer={<CustomerCartButton />}
+                order={<OrderList />}
+                checkout={<>checkout</>}
+            />
         </div>
     );
 }
