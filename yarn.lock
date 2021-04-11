@@ -1628,6 +1628,11 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
+"@iconify/icons-eva@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@iconify/icons-eva/-/icons-eva-1.1.0.tgz#6d6dae59d766587e9034bbb782acca6c40ab4b0c"
+  integrity sha512-a2wCJw+6UebrsoJ2WhpHUcdr4PJljwk0tdu1GfpjzwVyiJBC7y6sc2h7as1npJPLwgMIc/q8YFJf5iFl7Ik3NA==
+
 "@iconify/icons-fluent@^1.1.11":
   version "1.1.11"
   resolved "https://registry.yarnpkg.com/@iconify/icons-fluent/-/icons-fluent-1.1.11.tgz#d04da84018d9354c25b05f7a53807b22a778a61b"

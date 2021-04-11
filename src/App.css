@@ -1,4 +1,9 @@
-.container-fluid{
+.container-fluid {
     padding: 10px;
     height: 100vh;
+}
+:root {
+    --app-button-background-color: #feffec;
+    --app-button-background-color--active: #faffc0;
+    --app-button-border-color--active: #9EA920;
 }

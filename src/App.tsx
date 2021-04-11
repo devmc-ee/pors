@@ -3,6 +3,7 @@ import MenuItemButton from './components/MenuItemButton';
 import { MENU } from './__mock_data__/MENU';
 import OrderList from './components/OrderList';
 import CustomerCartButton from './components/CustomerCartButton';
+import CheckoutTotalButton from './components/CheckoutTotalButton';
 
 import './App.css';
 
@@ -15,7 +16,7 @@ function App(): JSX.Element {
                 keyboard={<div>{keyboard}</div>}
                 customer={<CustomerCartButton />}
                 order={<OrderList />}
-                checkout={<>checkout</>}
+                checkout={<CheckoutTotalButton />}
             />
         </div>
     );
