@@ -4,19 +4,19 @@ import { ProductItem } from '../types/product';
 export const MENU: ProductItem[] = [
     {
         code: '1',
-        name: 'Braised Pork Noodle Soup1',
+        name: 'Braised Pork Noodle Soup 1',
         price: 6,
         currencySymbol: CURRENCY.EUR.symbol,
     },
     {
         code: '2',
-        name: 'Braised Pork Noodle Soup2',
+        name: 'Braised Pork Noodle Soup 2',
         price: 10,
         currencySymbol: CURRENCY.EUR.symbol,
     },
     {
         code: '3',
-        name: 'Braised Pork Noodle Soup3',
+        name: 'Braised Pork Noodle Soup 3',
         price: 5,
         currencySymbol: CURRENCY.EUR.symbol,
     },
@@ -28,7 +28,7 @@ export const MENU: ProductItem[] = [
     },
     {
         code: '5',
-        name: 'Braised Pork Noodle Soup4',
+        name: 'Braised Pork Noodle Soup 4',
         price: 17,
         currencySymbol: CURRENCY.EUR.symbol,
     },
