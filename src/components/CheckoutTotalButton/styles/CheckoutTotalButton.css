@@ -1,0 +1,14 @@
+.checkout-total-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: var(--app-checkout-total-button__font-size);
+    text-transform: uppercase;
+    color: var(--app-checkout-total-button__text-color);
+    background-color: var(--app-checkout-total-button__background-color);
+    padding: 2rem;
+}
+.checkout-total-button__payment-icon {
+    font-size: var(--app-checkout-total-button__icon-size);
+}

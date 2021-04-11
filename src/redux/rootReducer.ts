@@ -3,7 +3,7 @@ import AppActions from '../types/redux/appActions';
 import orderReducer from './reducers/orderReducer';
 
 const appReducer = combineReducers({
-    order: orderReducer,
+    orderStates: orderReducer,
 });
 
 export const rootReducer = (state: AppState | undefined, action: AppActions) => {

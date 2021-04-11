@@ -9,6 +9,9 @@
     border: 1px solid black;
     cursor: pointer;
 }
+.order-item-btn__name{
+    text-align: left;
+}
 .order-item-btn__value{
     display: flex;
     justify-content: space-between;

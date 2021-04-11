@@ -7,7 +7,9 @@
 .main-page__cart-area {
     display: flex;
     flex-direction: column;
+    max-height: calc(100vh - 10px);
 }
-.main-page__order-area{
+.main-page__order-area {
     flex-grow: 1;
+    overflow-x: auto;
 }

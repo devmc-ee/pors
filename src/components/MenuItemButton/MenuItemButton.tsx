@@ -9,7 +9,7 @@ import './styles/MenuItemButton.css';
 
 const MenuItemButton = ({ classes = '', code, name, price, currencySymbol }: MenuItemButtonType): JSX.Element => {
     const dispatch = useDispatch();
-    const { order } = useSelector(({ order }: AppState) => order);
+    const { order } = useSelector(({ orderStates }: AppState) => orderStates);
 
     const itemQtyAddedText = code in order ? 'x' + order[code] : 0;
     const clickHandler = (code: string) => dispatch(addToCartAction(code));
