@@ -9,16 +9,10 @@ const KeyBoard: KeyBoard = ({ menuData }: KeyboardProps) => {
         price: '',
         addedAmount: 0,
     };
-
-    return menuData.length > 0 ? (
-        <div className="keyboard">
-            {menuData.map((item, i) => (
-                <MenuItemButton key={i} {...item} />
-            ))}
-        </div>
-    ) : (
-        <></>
-    );
+    //@ts-ignore
+    const menuItem = (item, i) => <MenuItemButton key={i} {...item} />;
+    //@ts-ignore
+    return menuData.length > 0 ? <div className="keyboard">{menuData.map(menuItem)}</div> : <></>;
 };
 
 export default KeyBoard;
@@ -26,4 +20,4 @@ export default KeyBoard;
 type KeyBoard = (props: KeyboardProps) => JSX.Element;
 export type KeyboardProps = {
     menuData: MenuItemButtonType[];
-};
+}; 

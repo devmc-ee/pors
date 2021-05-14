@@ -5,19 +5,17 @@ import { AppState } from '../../redux/rootReducer';
 import { InlineIcon } from '@iconify/react';
 import shoppingCartOutline from '@iconify/icons-eva/shopping-cart-outline';
 
-import './styles/MenuItemButton.css';
-
 const MenuItemButton = ({ classes = '', code, name, price, currencySymbol }: MenuItemButtonType): JSX.Element => {
     const dispatch = useDispatch();
     const { order } = useSelector(({ orderStates }: AppState) => orderStates);
 
-    const itemQtyAddedText = code in order ? 'x' + order[code] : 0;
+    const itemQtyAddedText = order.filter((item) => item === code).length;
     const clickHandler = (code: string) => dispatch(addToCartAction(code));
 
     return (
         <button
             onClick={() => clickHandler(code)}
-            className={'menu-item container ' + classes + (order[code] > 0 ? ' menu-item--active' : '')}
+            className={'menu-item container ' + classes + (itemQtyAddedText > 0 ? ' menu-item--active' : '')}
         >
             <div className="menu-item__row  ">
                 <div className="menu-item__number ">{code}</div>
@@ -26,8 +24,7 @@ const MenuItemButton = ({ classes = '', code, name, price, currencySymbol }: Men
             <div className="menu-item__row  menu-item__row--footer ">
                 <div className="menu-item__price">{price + currencySymbol}</div>
                 <div className="menu-item__quantity ">
-                    <InlineIcon icon={shoppingCartOutline} style={{ fontSize: '24px' }} />
-                    {itemQtyAddedText}
+                    <InlineIcon icon={shoppingCartOutline} style={{ fontSize: '24px' }} />x {itemQtyAddedText}
                 </div>
             </div>
         </button>

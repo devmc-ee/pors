@@ -8,6 +8,7 @@
     color: var(--app-checkout-total-button__text-color);
     background-color: var(--app-checkout-total-button__background-color);
     padding: 2rem;
+    cursor: pointer;
 }
 .checkout-total-button__payment-icon {
     font-size: var(--app-checkout-total-button__icon-size);

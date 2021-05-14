@@ -9,18 +9,22 @@ const OrderList = (): JSX.Element => {
     const { order } = useSelector(({ orderStates }: AppState) => orderStates);
     const orderList = [];
 
-    for (const item in order) {
-        const product = MENU.filter((menuItem: ProductItem) => menuItem.code === item);
+    for (const code of order) {
+        const product = MENU.filter((menuItem: ProductItem) => menuItem.code === code);
+        const orderedAmount = order.filter((orderedItem) => orderedItem === code);
 
         const args = {
             ...product[0],
-            amount: order[item],
+            amount: orderedAmount.length,
         };
-        orderList.push(<OrderItem key={item} {...args} />);
+        const orderedItems = orderList.filter((item) => item.key === code);
+        if (orderedItems.length === 0) orderList.push(<OrderItem key={code} {...args} />);
     }
+
     return (
         <>
             <div className="order-area__header">
+                <span className="order-area__header-item order-area__header-product-code">#</span>
                 <span className="order-area__header-item order-area__header-product-title">Product</span>
 
                 <span className="order-area__header-item order-area__header-amount-title"> Amount</span>

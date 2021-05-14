@@ -11,7 +11,6 @@ const CheckoutTotalButton = () => {
         <button className="checkout-total-button">
             <div className="checkout-total-button__payment-icon-wrapper">
                 <InlineIcon icon={shoppingCartOutline} className="checkout-total-button__payment-icon" />
-
                 <span className="checkout-total-button__payment-text">{PAYMENT_TEXT}</span>
             </div>
             <div className="button-pay-icon-value-wrapper">

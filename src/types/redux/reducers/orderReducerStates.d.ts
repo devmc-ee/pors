@@ -1,9 +1,7 @@
-import { OrderItem } from '../../order';
+import { OrderedItem } from '../../order';
 import { ProductItem } from '../../product';
 
 interface OrderReducerStates {
-    order: {
-        [code: string]: number;
-    };
+    order: OrderedItem[];
 }
 export default OrderReducerStates;

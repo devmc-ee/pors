@@ -19,3 +19,6 @@
     padding: 20px 18px;
     color: gray;
 }
+.order-area__header-product-code{
+    min-width: 50px;
+}

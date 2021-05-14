@@ -3,16 +3,14 @@ import { AppState } from '../redux/rootReducer';
 import useMenuData from './useMenuData';
 
 const useOrderData = () => {
-    const { priceList } = useMenuData();
+    const { getPriceBy } = useMenuData();
     const { order } = useSelector(({ orderStates }: AppState) => orderStates);
 
     let totalSum = 0;
 
-    for (const item in order) {
-        const orderedAmountValue = order[item];
-        const itemPrice = priceList.filter((itemPrice) => item === Object.keys(itemPrice)[0])[0];
-        const itemPriceValue = itemPrice[item];
-        totalSum += itemPriceValue * orderedAmountValue;
+    for (const code of order) {
+        const itemPrice = getPriceBy(code);
+        totalSum += itemPrice;
     }
 
     return { totalSum: totalSum.toFixed(2) };

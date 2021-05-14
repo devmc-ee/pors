@@ -3,22 +3,38 @@
     width: 100%;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 20px 18px;
+    padding: 10px 18px;
     background-color: transparent;
-    margin-top: 1px;
-    border: 1px solid black;
+    margin:0;
+    border: none;
+    border-bottom: 1px solid black;
     cursor: pointer;
+    font-size: 1.5rem;
+     font-weight: 600;
 }
 .order-item-btn__name{
     text-align: left;
+    display: flex;
+    align-items: flex-start;
+
+}
+.order-item-btn__name-main{
+    height: 50px;
+    text-overflow: clip;
+    overflow: hidden;
+    text-transform: lowercase;
 }
 .order-item-btn__value{
     display: flex;
     justify-content: space-between;
     width: 100%;
     max-width: 141px;
+    font-size: 1.5rem;
+    font-weight: 600;
 }
-.order-item-btn__text--bold{
-    font-weight: 700;
-    padding-bottom: 10px;
+
+.order-item-btn__name-code{
+    font-size: 1.5rem;
+    font-weight: 600;
+   min-width: 50px;
 }

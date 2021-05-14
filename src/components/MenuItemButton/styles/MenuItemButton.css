@@ -1,13 +1,15 @@
 .menu-item {
     padding: 10px 15px;
     width: 200px;
-    margin-right: 1px;
-    margin-bottom: 1px;
-    border: 1px solid black;
+    margin: 0;
+    border: none;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
     background-color: var(--app-button__background-color);
+    cursor: pointer;
 }
 .menu-item:focus {
-    border-color: var(--app-button__border-color--active);
+   /* border-color: var(--app-button__border-color--active); */
     background-color: var(--app-button__background-color);
 }
 .menu-item__row {
@@ -22,12 +24,14 @@
     font-weight: 700;
     text-align: right;
     line-height: 1.4rem;
-    max-width: 100px;
+    max-width: 110px;
     overflow: hidden;
-    min-height: 65px;
+    height: 65px;
+    text-transform: lowercase;
+
 }
 .menu-item__price {
-    text-align: left;
+    text-align: left; 
 }
 .menu-item__number {
     font-weight: 700;
@@ -36,8 +40,7 @@
     line-height: 3rem;
     width: 65px;
 }
-.menu-item__row--footer {
-    font-size: 1.3125rem;
+.menu-item__row--footer { 
     align-items: center;
 }
 .menu-item__quantity {
@@ -51,8 +54,10 @@
     background-color: var( --app-button__background-color--active);
 }
 .menu-item--active:focus {
-    border-color: var(--app-button__border-color--active);
-    border-width: 3px;
+    border: none;
+    border-right: 2px solid var(--app-button__border-color--active);
+    border-bottom: 1px solid var(--app-button__border-color--active);
+  
     background-color: var(--app-button__background-color--active);
-    padding: 8px 13px;
+   
 }
