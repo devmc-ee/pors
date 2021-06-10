@@ -4,6 +4,7 @@ import useOrderData from '../../hooks/useOrderData';
 import { CURRENCY } from '../../dataSets/CURRENCY';
 import { useState } from 'react';
 import Portal from '../Portal';
+import PaymentSelect from '../PaymentSelect/PaymentSelect';
 
 const CheckoutTotalButton = () => {
     const { totalSum } = useOrderData();
@@ -27,7 +28,7 @@ const CheckoutTotalButton = () => {
             </button>
             {payment && (
                 <Portal id="payment-modal">
-                    <p>Payment</p>
+                    <PaymentSelect onClick={() => set((prev) => !prev)} />
                 </Portal>
             )}
         </>

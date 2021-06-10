@@ -3,6 +3,11 @@
     height: 100vh;
 }
 :root {
+    --app__main-color--white: #fff;
+    --app__main-color--black: #000;
+    
+    --app__main-overlay--background-color: #000000db;
+
     --app-button__background-color: #feffec;
     --app-button__background-color--active: #faffc0;
     --app-button__border-color--active: #9ea920;
@@ -12,4 +17,12 @@
     --app-checkout-total-button__font-size: 2rem;
     --app-checkout-total-button__icon-size: 2.2rem;
 
+    --app__defualt-text-color--black: var( --app__main-color--black,#000 );
+
+    --app-button-background__payment-method--cash: rgba(11, 140, 0, 1);;
+    --app-button-background__payment-method--cash-hover: rgba(11, 140, 0, 0.8);
+     --app-button-background__payment-method--card: rgba(0, 64,140, 1);
+    --app-button-background__payment-method--card-hover: rgba(0, 64,140, 0.8);
+
+    --app-modal-window__background-color: #F9F9F9;
 }
