@@ -3,6 +3,7 @@ import PaymentButton from '../PaymentButton';
 import styles from './PaymentSelect.module.css';
 import { ReactComponent as BoltLogo } from '../../assets/icons/paymentMethods/Bolt_Logo_green.svg';
 import { ReactComponent as WoltLogo } from '../../assets/icons/paymentMethods/wolt_logo.svg';
+import { useTranslation } from 'react-i18next';
 
 interface PaymentSelectProp {
     onClick: () => void;
@@ -42,12 +43,13 @@ const PAYMENT_METHODS: PaymentMethod[] = [
 ];
 
 const PaymentSelect = ({ onClick }: PaymentSelectProp): JSX.Element => {
+    const { t } = useTranslation();
     const paymentButton = ({ type, ...rest }: PaymentMethod) => <PaymentButton {...rest} type={type} key={type} />;
     return (
         <div className={styles.container}>
             <div className={styles.overlay} onClick={onClick} />
             <div className={styles.content}>
-                <div className={styles.header}>Select payment method</div>
+                <div className={styles.header}>{t('paymentSelect.header')}</div>
                 <div className={styles.body}>{PAYMENT_METHODS.map(paymentButton)}</div>
             </div>
         </div>
