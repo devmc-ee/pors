@@ -49,10 +49,13 @@ const PaymentSelect = ({ onClick }: PaymentSelectProp): JSX.Element => {
         <div className={styles.container}>
             <div className={styles.overlay} onClick={onClick} />
             <div className={styles.content}>
-                <div className={styles.header}>{t('paymentSelect.header')}</div>
+                <div className={styles.header}>
+                    <span>{t('paymentSelect.header')}</span> <button onClick={onClick}>x</button>
+                </div>
                 <div className={styles.body}>{PAYMENT_METHODS.map(paymentButton)}</div>
             </div>
         </div>
     );
 };
+
 export default PaymentSelect;
