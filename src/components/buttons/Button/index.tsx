@@ -3,7 +3,7 @@ import { SyntheticEvent } from 'react';
 export interface IButton {
     classes?: string;
     value: number | string;
-    onClick: (event: SyntheticEvent) => void;
+    onClick: () => void;
     children: JSX.Element | string;
 }
 const Button = ({ classes = '', children, onClick, value = 0 }: IButton) => {

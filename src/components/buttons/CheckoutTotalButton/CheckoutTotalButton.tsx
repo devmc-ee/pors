@@ -5,8 +5,6 @@ import useOrderData from '../../../hooks/useOrderData';
 import PaymentSelect from '../../PaymentSelect/PaymentSelect';
 import Portal from '../../Portal';
 
-// PaymentSelect portal launcher
-
 const CheckoutTotalButton = (): JSX.Element => {
     const { totalSum } = useOrderData();
     const [payment, set] = useState(false);

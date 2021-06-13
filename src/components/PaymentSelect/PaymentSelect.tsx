@@ -1,9 +1,11 @@
-import { PaymentMethod } from '../../types/paymentMethod';
+import { PaymentMethod, PaymentMethodButton } from '../../types/paymentMethod';
 import PaymentButton from '../buttons/PaymentButton';
 import styles from './PaymentSelect.module.css';
 import { ReactComponent as BoltLogo } from '../../assets/icons/paymentMethods/Bolt_Logo_green.svg';
 import { ReactComponent as WoltLogo } from '../../assets/icons/paymentMethods/wolt_logo.svg';
 import { useTranslation } from 'react-i18next';
+import { useState } from 'react';
+import Portal from '../Portal';
 
 interface PaymentSelectProp {
     onClick: () => void;
@@ -44,8 +46,15 @@ const PAYMENT_METHODS: PaymentMethod[] = [
 
 const PaymentSelect = ({ onClick }: PaymentSelectProp): JSX.Element => {
     const { t } = useTranslation();
+    const [context, set] = useState<string | null>(null);
 
-    const paymentButton = ({ type, ...rest }: PaymentMethod) => <PaymentButton {...rest} type={type} key={type} />;
+    const handleContext = (context: string) => {
+        set(() => context);
+    };
+
+    const paymentButton = ({ type, ...rest }: PaymentMethod) => (
+        <PaymentButton onClick={() => handleContext(type)} {...rest} type={type} key={type} />
+    );
     return (
         <>
             <div className={styles.container}>
@@ -57,11 +66,11 @@ const PaymentSelect = ({ onClick }: PaymentSelectProp): JSX.Element => {
                     <div className={styles.body}>{PAYMENT_METHODS.map(paymentButton)}</div>
                 </div>
             </div>
-            {/*      {       {payment && (
-                <Portal id="payment-modal">
-                    <PaymentSel}ect onClick={() => set((prev) => !prev)} />
+            {context && (
+                <Portal id={`payment-method--${context}`}>
+                    <> {context}</>
                 </Portal>
-            )} */}
+            )}
         </>
     );
 };
