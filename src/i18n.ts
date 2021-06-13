@@ -7,12 +7,18 @@ const resources = {
 			paymentSelect: {
 				header: 'Select payment method',
 			},
+			checkoutButton: {
+				label: 'Payment',
+			},
 		},
 	},
 	et: {
 		translation: {
 			paymentSelect: {
 				header: 'Vali tasumise viis',
+			},
+			checkoutButton: {
+				label: 'Tasumine',
 			},
 		},
 	},
