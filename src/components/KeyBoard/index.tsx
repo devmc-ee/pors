@@ -1,2 +1,1 @@
-import KeyBoard from './KeyBoard';
-export default KeyBoard;
+export { default } from './KeyBoard';

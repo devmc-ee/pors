@@ -1,14 +1,7 @@
 import { MenuItemButtonType } from '../../types/button';
-import MenuItemButton from '../buttons/MenuItemButton';
 
 // Contains menu btns
-const KeyBoard: KeyBoard = ({ menuData }: KeyboardProps) => {
-    const args = {
-        itemNumber: 0,
-        name: '',
-        price: '',
-        addedAmount: 0,
-    };
+const KeyBoard: KeyBoard = ({ menuData, menuItemButton: MenuItemButton }: KeyboardProps) => {
     //@ts-ignore
     const menuItem = (item, i) => <MenuItemButton key={i} {...item} />;
     //@ts-ignore
@@ -19,5 +12,6 @@ export default KeyBoard;
 
 type KeyBoard = (props: KeyboardProps) => JSX.Element;
 export type KeyboardProps = {
+    menuItemButton: React.FC;
     menuData: MenuItemButtonType[];
 };

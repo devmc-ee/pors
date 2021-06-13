@@ -6,13 +6,13 @@ import { useState } from 'react';
 import Portal from '../../Portal';
 import PaymentSelect from '../../PaymentSelect/PaymentSelect';
 
-const CheckoutTotalButton = () => {
+const CheckoutTotalButton = (): JSX.Element => {
     const { totalSum } = useOrderData();
     const [payment, set] = useState(false);
     const PAYMENT_TEXT = 'Pay';
 
     const handleClick = () => {
-        set(true);
+        set((prev) => !prev);
     };
     return (
         <>

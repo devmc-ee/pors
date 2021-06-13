@@ -1,6 +1,6 @@
 import CheckoutTotalButton from '..';
 import { Meta, Story } from '@storybook/react/types-6-0';
-import '../../../App.css';
+import '../../../../App.css';
 
 export default {
     title: 'Cart Area/Checkout total button',

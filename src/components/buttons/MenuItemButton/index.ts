@@ -1,3 +1,3 @@
 import './styles/MenuItemButton.css';
-import MenuItemButton from './MenuItemButton';
-export default MenuItemButton;
+export { MenuItem } from './MenuButton';
+export { default } from './MenuItemButton';

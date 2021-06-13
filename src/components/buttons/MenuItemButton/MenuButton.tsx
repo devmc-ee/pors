@@ -1,13 +1,8 @@
-import { MenuItemButtonType } from '../../../types/button';
+import { MenuButtonProps } from '../../../types/button';
 import { InlineIcon } from '@iconify/react';
 import shoppingCartOutline from '@iconify/icons-eva/shopping-cart-outline';
 
-interface MenuButtonProps extends MenuItemButtonType {
-    addedToCartAmount: number;
-    onClick: () => void;
-}
-
-const MenuItem = ({
+export const MenuItem = ({
     addedToCartAmount,
     currencySymbol,
     code,

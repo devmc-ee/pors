@@ -44,17 +44,25 @@ const PAYMENT_METHODS: PaymentMethod[] = [
 
 const PaymentSelect = ({ onClick }: PaymentSelectProp): JSX.Element => {
     const { t } = useTranslation();
+
     const paymentButton = ({ type, ...rest }: PaymentMethod) => <PaymentButton {...rest} type={type} key={type} />;
     return (
-        <div className={styles.container}>
-            <div className={styles.overlay} onClick={onClick} />
-            <div className={styles.content}>
-                <div className={styles.header}>
-                    <span>{t('paymentSelect.header')}</span> <button onClick={onClick}>x</button>
+        <>
+            <div className={styles.container}>
+                <div className={styles.overlay} onClick={onClick} />
+                <div className={styles.content}>
+                    <div className={styles.header}>
+                        <span>{t('paymentSelect.header')}</span> <button onClick={onClick}>x</button>
+                    </div>
+                    <div className={styles.body}>{PAYMENT_METHODS.map(paymentButton)}</div>
                 </div>
-                <div className={styles.body}>{PAYMENT_METHODS.map(paymentButton)}</div>
             </div>
-        </div>
+            {/*      {       {payment && (
+                <Portal id="payment-modal">
+                    <PaymentSel}ect onClick={() => set((prev) => !prev)} />
+                </Portal>
+            )} */}
+        </>
     );
 };
 
