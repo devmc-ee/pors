@@ -1,10 +1,10 @@
 import { InlineIcon } from '@iconify/react';
 import shoppingCartOutline from '@iconify/icons-eva/shopping-cart-outline';
-import useOrderData from '../../hooks/useOrderData';
-import { CURRENCY } from '../../dataSets/CURRENCY';
+import useOrderData from '../../../hooks/useOrderData';
+import { CURRENCY } from '../../../dataSets/CURRENCY';
 import { useState } from 'react';
-import Portal from '../Portal';
-import PaymentSelect from '../PaymentSelect/PaymentSelect';
+import Portal from '../../Portal';
+import PaymentSelect from '../../PaymentSelect/PaymentSelect';
 
 const CheckoutTotalButton = () => {
     const { totalSum } = useOrderData();

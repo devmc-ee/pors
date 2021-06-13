@@ -1,4 +1,4 @@
-import { PaymentMethod } from '../../types/paymentMethod';
+import { PaymentMethod } from '../../../types/paymentMethod';
 import Button from '../Button';
 
 const PaymentButton = ({ type, icon, name, description }: PaymentMethod): JSX.Element => {

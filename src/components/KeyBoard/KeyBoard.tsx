@@ -1,5 +1,5 @@
 import { MenuItemButtonType } from '../../types/button';
-import MenuItemButton from '../MenuItemButton';
+import MenuItemButton from '../buttons/MenuItemButton';
 
 // Contains menu btns
 const KeyBoard: KeyBoard = ({ menuData }: KeyboardProps) => {
@@ -20,4 +20,4 @@ export default KeyBoard;
 type KeyBoard = (props: KeyboardProps) => JSX.Element;
 export type KeyboardProps = {
     menuData: MenuItemButtonType[];
-}; 
+};

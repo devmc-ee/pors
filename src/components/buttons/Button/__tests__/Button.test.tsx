@@ -1,7 +1,6 @@
-import React, { useState, SyntheticEvent } from 'react';
 import { cleanup, fireEvent, render, screen } from '@testing-library/react';
 import renderer from 'react-test-renderer';
-import Button, { IButton } from '../.';
+import Button, { IButton } from '..';
 
 const setUp = (props: IButton) => render(<Button {...props} />);
 

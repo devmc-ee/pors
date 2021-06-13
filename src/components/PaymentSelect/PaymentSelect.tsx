@@ -1,5 +1,5 @@
 import { PaymentMethod } from '../../types/paymentMethod';
-import PaymentButton from '../PaymentButton';
+import PaymentButton from '../buttons/PaymentButton';
 import styles from './PaymentSelect.module.css';
 import { ReactComponent as BoltLogo } from '../../assets/icons/paymentMethods/Bolt_Logo_green.svg';
 import { ReactComponent as WoltLogo } from '../../assets/icons/paymentMethods/wolt_logo.svg';

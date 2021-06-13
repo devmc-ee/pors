@@ -1,7 +1,7 @@
-import MenuItemButton from '../';
+import MenuItemButton from '..';
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { CURRENCY } from '../../../dataSets/CURRENCY';
-import { MenuItemButtonType } from '../../../types/button';
+import { CURRENCY } from '../../../../dataSets/CURRENCY';
+import { MenuItemButtonType } from '../../../../types/button';
 export default {
     title: 'MenuItemButton',
     component: MenuItemButton,
