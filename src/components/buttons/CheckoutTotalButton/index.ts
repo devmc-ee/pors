@@ -1,5 +1,3 @@
-import CheckoutTotalButton from './CheckoutTotalButton';
-
 import './styles/CheckoutTotalButton.css';
-
-export default CheckoutTotalButton;
+export { CheckoutButton } from './CheckoutButton';
+export { default } from './CheckoutTotalButton';
