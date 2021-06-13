@@ -1,6 +1,6 @@
 import './styles/MainPage.css';
 
-const MainPage = ({ keyboard, order, checkout, customer }: MainPageProps) => {
+const MainPage: MainPage = ({ keyboard, order, checkout, customer }: MainPageProps) => {
     return (
         <div className="main-page main-page__container">
             <div className="main-page__keyboard-area">{keyboard}</div>

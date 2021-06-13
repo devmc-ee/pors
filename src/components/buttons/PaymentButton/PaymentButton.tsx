@@ -1,8 +1,15 @@
 import { PaymentMethodButton } from '../../../types/paymentMethod';
-import Button from '../Button';
 
-const PaymentButton = ({ type, icon, name, description, onClick }: PaymentMethodButton): JSX.Element => {
-    const Icon = () => (icon ? icon : <></>);
+import { capitalize } from '../../../utils/stringUtils';
+import useIcons from '../../../hooks/useIcons';
+
+import Button from '../Button';
+import Icon from '../../icons/Icon';
+
+const PaymentButton = ({ type, name, description, onClick }: PaymentMethodButton): JSX.Element => {
+    const iconName = !!type ? capitalize(type) : false;
+    const { hasIcon } = useIcons();
+
     return (
         <Button
             key={type}
@@ -12,8 +19,11 @@ const PaymentButton = ({ type, icon, name, description, onClick }: PaymentMethod
         >
             <>
                 <div className={'payment-method-button__icon-title'}>
-                    {/*@ts-ignore*/}
-                    {icon ? <Icon /> : <span className={'payment-method-button__title'}> {name}</span>}
+                    {!!iconName && hasIcon(iconName as string) ? (
+                        <Icon name={iconName as string} />
+                    ) : (
+                        <span className={'payment-method-button__title'}> {name}</span>
+                    )}
                 </div>
                 <span className={'payment-method-button__description'}>{description}</span>
             </>

@@ -1,66 +1,74 @@
-.payment-method-button{
+.payment-method-button {
     min-height: 200px;
     height: 100%;
     color: var(--app__main-color--white);
     border: none;
-     font-weight: 600;
-     cursor: pointer;margin: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 1px;
 }
-.payment-method-button__icon{
+.payment-method-button__icon svg {
     width: 100%;
     max-width: 200px;
 }
-.payment-method-button__icon-title{
+.payment-method-button__icon-title {
     font-size: 2rem;
     text-transform: uppercase;
 }
-.payment-method-button__description{
+.payment-method-button__description {
     font-size: 0.9rem;
 }
 .payment-method-button__cash,
 .payment-method-button__cash:active,
-.payment-method-button__cash:focus{
-    background-color: var(--app-button-background__payment-method--cash)
+.payment-method-button__cash:focus {
+    background-color: var(--app-button-background__payment-method--cash);
 }
 
-.payment-method-button__cash:hover{
-      background-color: var( --app-button-background__payment-method--cash-hover)
+.payment-method-button__cash:hover {
+    background-color: var(--app-button-background__payment-method--cash-hover);
 }
 
 .payment-method-button__card,
 .payment-method-button__card:active,
-.payment-method-button__card:focus{
-    background-color: var(--app-button-background__payment-method--card)
+.payment-method-button__card:focus {
+    background-color: var(--app-button-background__payment-method--card);
 }
 
-.payment-method-button__card:hover{
-      background-color: var( --app-button-background__payment-method--card-hover)
+.payment-method-button__card:hover {
+    background-color: var(--app-button-background__payment-method--card-hover);
 }
 
 .payment-method-button__mixed,
 .payment-method-button__mixed:active,
-.payment-method-button__mixed:focus{
-   
-     background: linear-gradient(90deg, var(--app-button-background__payment-method--cash) 0%,  var(--app-button-background__payment-method--cash) 50%,  var( --app-button-background__payment-method--card)  51%,var( --app-button-background__payment-method--card) 100%)
+.payment-method-button__mixed:focus {
+    background: linear-gradient(
+        90deg,
+        var(--app-button-background__payment-method--cash) 0%,
+        var(--app-button-background__payment-method--cash) 50%,
+        var(--app-button-background__payment-method--card) 51%,
+        var(--app-button-background__payment-method--card) 100%
+    );
 }
 
-.payment-method-button__mixed:hover{
-    background: linear-gradient(90deg, var(--app-button-background__payment-method--cash-hover) 0%,  var(--app-button-background__payment-method--cash-hover) 50%,  var( --app-button-background__payment-method--card-hover)  51%,var( --app-button-background__payment-method--card-hover) 100%)
-
+.payment-method-button__mixed:hover {
+    background: linear-gradient(
+        90deg,
+        var(--app-button-background__payment-method--cash-hover) 0%,
+        var(--app-button-background__payment-method--cash-hover) 50%,
+        var(--app-button-background__payment-method--card-hover) 51%,
+        var(--app-button-background__payment-method--card-hover) 100%
+    );
 }
 .payment-method-button__wolt,
 .payment-method-button__wolt:active,
 .payment-method-button__wolt:focus,
-
 .payment-method-button__bolt,
 .payment-method-button__bolt:active,
-.payment-method-button__bolt:focus{
+.payment-method-button__bolt:focus {
     background-color: var(--app__main-color--white);
     color: var(--app__defualt-text-color--black);
 }
 
-
-.payment-method-button__mixed:hover{
-   background-color: var(--app__main-color--white);
+.payment-method-button__mixed:hover {
+    background-color: var(--app__main-color--white);
 }
-

@@ -20,7 +20,7 @@ module.exports = {
         'react/react-in-jsx-scope': 'off',
         '@typescript-eslint/ban-ts-ignore': 'off',
         '@typescript-eslint/ban-ts-comment': 'off',
-        'prettier/prettier': ['error', { tabWidth: 4 }],
+        'prettier/prettier': ['error', { tabWidth: 4, endOfLine: 'auto' }],
     },
     settings: {
         react: {

@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { CheckoutButton } from '.';
 import useOrderData from '../../../hooks/useOrderData';
 
-import PaymentSelect from '../../PaymentSelect/PaymentSelect';
-import Portal from '../../Portal';
+import PaymentSelect from '../../sets/PaymentSelect/PaymentSelect';
+import Portal from '../../portals/Portal';
 
 const CheckoutTotalButton = (): JSX.Element => {
     const { totalSum } = useOrderData();

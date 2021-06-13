@@ -3,7 +3,7 @@ import contactCard20Regular from '@iconify/icons-fluent/contact-card-20-regular'
 
 import './styles/CustomerCartButton.css';
 
-const CustomerCartButton = () => {
+const CustomerCartButton = (): JSX.Element => {
     const customerName = 'Private Person';
     return (
         <div className="cart-customer-card">
