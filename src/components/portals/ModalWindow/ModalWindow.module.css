@@ -1,0 +1,51 @@
+.container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--app__defualt-text-color--black, #000);
+}
+.overlay {
+    z-index: 101;
+    background-color: var(--app__main-overlay--background-color, #000000db);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.content {
+    color: var(--app__defualt-text-color--black, #000);
+    background-color: var(--app-modal-window__background-color, #f9f9f9);
+    z-index: 110;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding: 16px 16px 32px;
+    height: fit-content;
+}
+.header {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 2.5rem;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+.body {
+    z-index: 120;
+    width: 100%;
+}
+.closeButton {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
