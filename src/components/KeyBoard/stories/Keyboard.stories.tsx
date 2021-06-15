@@ -18,21 +18,24 @@ export const Default = Template.bind({});
 Default.args = {
     menuData: [
         {
-            code: '1',
-            name: 'Braised Pork Noodle Soup',
-            price: 7,
+            code: 'TF1',
+            menuNumber: '1',
+            name: 'BRAISED PORK NOODLE SOUP',
+            price: 6,
             currencySymbol: CURRENCY.EUR.symbol,
         },
         {
-            code: '2',
-            name: 'Braised Pork Noodle Soup',
-            price: 17,
+            menuNumber: '2',
+            code: 'TF2',
+            name: 'BRAISED PORK SOUP',
+            price: 10,
             currencySymbol: CURRENCY.EUR.symbol,
         },
         {
-            code: '3',
-            name: 'Braised Pork Noodle Soup',
-            price: 27,
+            menuNumber: '3',
+            code: 'TF3',
+            name: 'RICE PORK SOUP',
+            price: 5,
             currencySymbol: CURRENCY.EUR.symbol,
         },
     ],

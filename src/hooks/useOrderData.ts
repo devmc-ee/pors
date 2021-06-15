@@ -9,10 +9,9 @@ const useOrderData = (): UseOrderDataReturnType => {
 
 	let totalSum = 0;
 
-	for (const code of order) {
-		//@ts-ignore
+	for (const code in order) {
 		const itemPrice = getPriceBy(code as keyof OrderedItem);
-		totalSum += itemPrice;
+		totalSum += itemPrice * order[code];
 	}
 
 	return { totalSum: totalSum.toFixed(2) };

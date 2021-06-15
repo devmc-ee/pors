@@ -5,8 +5,9 @@ import shoppingCartOutline from '@iconify/icons-eva/shopping-cart-outline';
 export const MenuItem = ({
     addedToCartAmount,
     currencySymbol,
-    code,
+    // code,
     name,
+    menuNumber,
     price,
     onClick,
     classes = '',
@@ -17,7 +18,7 @@ export const MenuItem = ({
             className={'menu-item container ' + classes + (addedToCartAmount > 0 ? ' menu-item--active' : '')}
         >
             <div className="menu-item__row  ">
-                <div className="menu-item__number ">{code}</div>
+                <div className="menu-item__number ">{menuNumber}</div>
                 <div className="menu-item__name">{name}</div>
             </div>
             <div className="menu-item__row  menu-item__row--footer ">

@@ -7,9 +7,8 @@ import MenuItem from './MenuButton';
 
 const mapStateToProps = (state: AppState, { classes = '', code, name, price, currencySymbol }: MenuItemButtonType) => {
     const { order } = state.orderStates;
-
     return {
-        addedToCartAmount: order.filter((item) => item === code).length,
+        addedToCartAmount: code in order ? order[code] : 0,
         classes,
         code,
         name,

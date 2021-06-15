@@ -2,9 +2,8 @@ import { MenuItemButtonType } from '../../types/button';
 
 // Contains menu btns
 const KeyBoard: KeyBoard = ({ menuData, menuItemButton: MenuItemButton }: KeyboardProps) => {
-    //@ts-ignore
-    const menuItem = (item, i) => <MenuItemButton key={i} {...item} />;
-    //@ts-ignore
+    const menuItem = (item: MenuItemButtonType, i: number) => <MenuItemButton key={i} {...item} />;
+
     return menuData.length > 0 ? <div className="keyboard">{menuData.map(menuItem)}</div> : <></>;
 };
 

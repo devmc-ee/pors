@@ -1,11 +1,11 @@
 import MainPage from './components/MainPage';
 import MenuItemButton from './components/buttons/MenuItemButton';
 import { MENU } from './__mock_data__/MENU';
-import OrderList from './components/OrderList';
 import CustomerCartButton from './components/buttons/CustomerCartButton';
 import CheckoutTotalButton from './components/buttons/CheckoutTotalButton';
 
 import './App.css';
+import OrderList from './components/sets/OrderList';
 
 function App(): JSX.Element {
     const keyboard = MENU.map((item) => <MenuItemButton key={item.code} {...item} />);

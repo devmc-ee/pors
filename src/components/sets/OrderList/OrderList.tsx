@@ -1,23 +1,25 @@
 import { useSelector } from 'react-redux';
-import { AppState } from '../../redux/rootReducer';
-import OrderItem from '../OrderItem';
-import MENU from '../../__mock_data__/MENU';
-import { ProductItem } from '../../types/product';
+import { AppState } from '../../../redux/rootReducer';
+import OrderItem from '../../OrderItem';
+import MENU from '../../../__mock_data__/MENU';
+import { ProductItem } from '../../../types/product';
 
 const OrderList = (): JSX.Element => {
     const EMPTY_CART_TEXT = 'Nothing added yet';
     const { order } = useSelector(({ orderStates }: AppState) => orderStates);
     const orderList = [];
 
-    for (const code of order) {
-        const product = MENU.filter((menuItem: ProductItem) => menuItem.code === code);
-        const orderedAmount = order.filter((orderedItem) => orderedItem === code);
+    for (const code in order) {
+        const product = MENU.filter(({ code: itemCode }: ProductItem) => itemCode === code);
+        const orderedAmount = order[code];
 
         const args = {
             ...product[0],
-            amount: orderedAmount.length,
+            amount: orderedAmount,
         };
+
         const orderedItems = orderList.filter((item) => item.key === code);
+
         if (orderedItems.length === 0) orderList.push(<OrderItem key={code} {...args} />);
     }
 
