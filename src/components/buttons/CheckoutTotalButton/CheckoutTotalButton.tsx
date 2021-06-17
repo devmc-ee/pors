@@ -3,9 +3,11 @@ import { CheckoutButton } from '.';
 import useOrderData from '../../../hooks/useOrderData';
 
 import PaymentSelect from '../../sets/PaymentSelect/PaymentSelect';
-import Portal from '../../portals/Portal';
+import ModalWindow from '../../portals/ModalWindow';
+import { useTranslation } from 'react-i18next';
 
 const CheckoutTotalButton = (): JSX.Element => {
+    const { t } = useTranslation();
     const { totalSum } = useOrderData();
     const [payment, set] = useState(false);
 
@@ -16,9 +18,14 @@ const CheckoutTotalButton = (): JSX.Element => {
         <>
             <CheckoutButton totalSum={totalSum} onClick={handleClick} />
             {payment && (
-                <Portal id="payment-modal">
-                    <PaymentSelect onClick={() => set((prev) => !prev)} />
-                </Portal>
+                <ModalWindow
+                    isOpen={!!payment}
+                    handleOpen={handleClick}
+                    id="payment-modal"
+                    headerText={t('paymentSelect.header')}
+                >
+                    <PaymentSelect />
+                </ModalWindow>
             )}
         </>
     );

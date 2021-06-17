@@ -1,13 +1,9 @@
 import { PaymentMethod } from '../../../types/paymentMethod';
 import PaymentButton from '../../buttons/PaymentButton';
 import styles from './PaymentSelect.module.css';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useState } from 'react';
-import Portal from '../../portals/Portal';
-
-interface PaymentSelectProp {
-    onClick: () => void;
-}
+import ModalWindow from '../../portals/ModalWindow';
 
 const PAYMENT_METHODS: PaymentMethod[] = [
     {
@@ -37,33 +33,38 @@ const PAYMENT_METHODS: PaymentMethod[] = [
     },
 ];
 
-const PaymentSelect = ({ onClick }: PaymentSelectProp): JSX.Element => {
+const PaymentSelect = (): JSX.Element => {
     const { t } = useTranslation();
     const [context, set] = useState<string | null>(null);
+    const [isOpen, setOpen] = useState(false);
 
     const handleContext = (context: string) => {
         set(() => context);
     };
+    const handleOpen = () => {
+        setOpen((prev) => !prev);
+    };
+    useEffect(() => {
+        if (!!context) handleOpen();
+    }, [context]);
 
     const paymentButton = ({ type, ...rest }: PaymentMethod) => (
         <PaymentButton onClick={() => handleContext(type)} {...rest} type={type} key={type} />
     );
     return (
         <>
-            <div className={styles.container}>
-                <div className={styles.overlay} onClick={onClick} />
-                <div className={styles.content}>
-                    <div className={styles.header}>
-                        <span>{t('paymentSelect.header')}</span> <button onClick={onClick}>x</button>
-                    </div>
-                    <div className={styles.body}>{PAYMENT_METHODS.map(paymentButton)}</div>
-                </div>
+            <div className={styles.content}>
+                <div className={styles.body}>{PAYMENT_METHODS.map(paymentButton)}</div>
             </div>
-            {context && (
-                <Portal id={`payment-method--${context}`}>
-                    <> {context}</>
-                </Portal>
-            )}
+
+            <ModalWindow
+                isOpen={isOpen}
+                handleOpen={handleOpen}
+                id={`payment-method--${context}`}
+                headerText={`${t('paymentSelect.paymentMethodModal.header')}: ${context?.toUpperCase()}`}
+            >
+                <> {context}</>
+            </ModalWindow>
         </>
     );
 };

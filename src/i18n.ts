@@ -1,12 +1,11 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
+import { PAYMENT_SELECT } from './components/sets/PaymentSelect/PaymentSelect.i18n';
 
 const resources = {
 	en: {
 		translation: {
-			paymentSelect: {
-				header: 'Select payment method',
-			},
+			paymentSelect: PAYMENT_SELECT.en,
 			checkoutButton: {
 				label: 'Payment',
 			},
@@ -14,9 +13,7 @@ const resources = {
 	},
 	et: {
 		translation: {
-			paymentSelect: {
-				header: 'Vali tasumise viis',
-			},
+			paymentSelect: PAYMENT_SELECT.et,
 			checkoutButton: {
 				label: 'Tasumine',
 			},
