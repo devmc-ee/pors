@@ -5,24 +5,31 @@
 :root {
     --app__main-color--white: #fff;
     --app__main-color--black: #000;
-    
+    --app__main-color--gold: #9ea920;
+    --app__main-color--yellow-light: #faffc0;
+    --app__pallete--gray-light: #e3e3e3;
+
     --app__main-overlay--background-color: #000000db;
 
     --app-button__background-color: #feffec;
     --app-button__background-color--active: #faffc0;
-    --app-button__border-color--active: #9ea920;
+    --app-button__border-color--active: var(--app__main-color--gold, #9ea920);
 
     --app-checkout-total-button__text-color: #fff;
-    --app-checkout-total-button__background-color: #0B8C00;
+    --app-checkout-total-button__background-color: #0b8c00;
     --app-checkout-total-button__font-size: 2rem;
     --app-checkout-total-button__icon-size: 2.2rem;
 
-    --app__defualt-text-color--black: var( --app__main-color--black,#000 );
+    --app-cash-keyboard--background-color: var(--app__pallete--gray-light);
+    --app-cash-button--background-color: var(--app__main-color-white, #fff);
+    --app-cash-button--background-color--hover: var(--app__main-color--yellow-light);
 
-    --app-button-background__payment-method--cash: rgba(11, 140, 0, 1);;
+    --app__defualt-text-color--black: var(--app__main-color--black, #000);
+
+    --app-button-background__payment-method--cash: rgba(11, 140, 0, 1);
     --app-button-background__payment-method--cash-hover: rgba(11, 140, 0, 0.8);
-     --app-button-background__payment-method--card: rgba(0, 64,140, 1);
-    --app-button-background__payment-method--card-hover: rgba(0, 64,140, 0.8);
+    --app-button-background__payment-method--card: rgba(0, 64, 140, 1);
+    --app-button-background__payment-method--card-hover: rgba(0, 64, 140, 0.8);
 
-    --app-modal-window__background-color: #F9F9F9;
+    --app-modal-window__background-color: #f9f9f9;
 }

@@ -1,0 +1,14 @@
+.cash-button {
+    border: none;
+    background-color: var(--app-cash-button--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.cash-button:hover {
+    background-color: var(--app-cash-button--background-color--hover);
+}
