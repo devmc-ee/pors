@@ -1,0 +1,1 @@
+export { getBemClasses } from './getBemClasses';
