@@ -1,7 +1,10 @@
 import { BemStructure } from '../../../types/BemStructure';
 import { getBemClasses } from '../../../utils/classesUtils';
 
-const PaymentRegister = (): JSX.Element => {
+export interface PaymentRegisterProps {
+    context: string;
+}
+const PaymentRegister = ({ context }: PaymentRegisterProps): JSX.Element => {
     const bem: BemStructure = {
         block: 'payment-register-block',
         container: 'container',
