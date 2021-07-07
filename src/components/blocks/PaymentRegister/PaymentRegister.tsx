@@ -1,9 +1,12 @@
-const PaymentRegister = (): JSX.Element => {
-    const bem = {
-        block: 'payment-register-block',
-        elements: ['container'],
-    };
+import { BemStructure } from '../../../types/BemStructure';
+import { getBemClasses } from '../../../utils/classesUtils';
 
-    return <div className={bem.block}>PaymentRegister</div>;
+const PaymentRegister = (): JSX.Element => {
+    const bem: BemStructure = {
+        block: 'payment-register-block',
+        container: 'container',
+    };
+    const classes = getBemClasses(bem);
+    return <div className={classes?.block}>PaymentRegister</div>;
 };
 export default PaymentRegister;

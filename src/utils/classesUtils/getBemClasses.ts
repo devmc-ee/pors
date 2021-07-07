@@ -15,7 +15,7 @@ export const getBemClasses = (bem: BemStructure, customBlockName = ''): null | B
 	let customBlock = '';
 	if (typeof customBlockName === 'string' && customBlockName.trim().length > 0) customBlock = customBlockName;
 
-	let result: BemStructure = {
+	const result: BemStructure = {
 		block: !customBlock ? bem.block : [bem.block, customBlock].join(' '),
 	};
 
