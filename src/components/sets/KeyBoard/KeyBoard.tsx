@@ -1,4 +1,4 @@
-import { MenuItemButtonType } from '../../types/button';
+import { MenuItemButtonType } from '../../../types/button';
 
 // Contains menu btns
 const KeyBoard: KeyBoard = ({ menuData, menuItemButton: MenuItemButton }: KeyboardProps) => {
