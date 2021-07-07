@@ -17,16 +17,14 @@ const PaymentButton = ({ type, name, description, onClick }: PaymentMethodButton
             onClick={onClick}
             classes={'payment-method-button payment-method-button__' + type}
         >
-            <>
-                <div className={'payment-method-button__icon-title'}>
-                    {!!iconName && hasIcon(iconName as string) ? (
-                        <Icon name={iconName as string} />
-                    ) : (
-                        <span className={'payment-method-button__title'}> {name}</span>
-                    )}
-                </div>
-                <span className={'payment-method-button__description'}>{description}</span>
-            </>
+            <div className={'payment-method-button__icon-title'}>
+                {!!iconName && hasIcon(iconName as string) ? (
+                    <Icon name={iconName as string} />
+                ) : (
+                    <span className={'payment-method-button__title'}> {name}</span>
+                )}
+            </div>
+            <span className={'payment-method-button__description'}>{description}</span>
         </Button>
     );
 };
