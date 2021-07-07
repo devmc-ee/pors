@@ -1,0 +1,11 @@
+.cash-payment-register-block {
+    width: 100%;
+}
+.cash-payment-register-block__container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.cash-payment-register-block__block-area {
+    width: 100%;
+}

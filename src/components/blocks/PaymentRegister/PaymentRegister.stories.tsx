@@ -3,7 +3,7 @@ import PaymentRegister from '.';
 import { PaymentRegisterProps } from './PaymentRegister';
 
 export default {
-    title: 'Block/PaymentRegister',
+    title: 'Blocks/PaymentRegister',
     component: PaymentRegister,
     args: {
         context: '',
