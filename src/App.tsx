@@ -1,4 +1,4 @@
-import MainPage from './components/MainPage';
+import MainPage from './components/pages/MainPage';
 import MenuItemButton from './components/buttons/MenuItemButton';
 import { MENU } from './__mock_data__/MENU';
 import CustomerCartButton from './components/buttons/CustomerCartButton';

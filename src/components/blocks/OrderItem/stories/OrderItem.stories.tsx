@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { CURRENCY } from '../../../dataSets/CURRENCY';
-import { OrderedItemType } from '../../../types/order';
+import { CURRENCY } from '../../../../dataSets/CURRENCY';
+import { OrderedItemType } from '../../../../types/order';
 import OrderItem from '../OrderItem';
 
 export default {

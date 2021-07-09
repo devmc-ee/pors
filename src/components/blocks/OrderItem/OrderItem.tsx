@@ -1,4 +1,4 @@
-import { OrderedItemType } from '../../types/order';
+import { OrderedItemType } from '../../../types/order';
 import './styles/OrderItem.css';
 
 const OrderItem = ({ name, menuNumber, price, currencySymbol, amount }: OrderedItemType): JSX.Element => {

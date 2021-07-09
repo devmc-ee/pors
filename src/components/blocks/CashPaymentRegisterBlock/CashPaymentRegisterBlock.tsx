@@ -15,6 +15,7 @@ const CashPaymentRegisterBlock = () => {
         footer: 'footer',
     };
     const classes = getBemClasses(bem);
+
     return (
         <div className={classes?.block}>
             <div className={classes?.container}>
