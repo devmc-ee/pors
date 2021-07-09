@@ -1,6 +1,6 @@
 import { BemStructure } from '../../../types/BemStructure';
 import { getBemClasses } from '../../../utils/classesUtils';
-import CashKeyboard from '../../sets/CashKeyboard';
+import CashKeyboard from '../CashKeyboard';
 
 const CashPaymentRegisterBlock = () => {
     const bem: BemStructure = {
