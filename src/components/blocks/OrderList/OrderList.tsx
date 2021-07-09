@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import { AppState } from '../../../redux/rootReducer';
-import OrderItem from '../../elements/OrderListElements/OrderItem';
+import OrderItem from './OrderItem';
 import MENU from '../../../__mock_data__/MENU';
 import { ProductItem } from '../../../types/product';
 
