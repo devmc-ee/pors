@@ -1,7 +1,7 @@
 import { MenuItem } from '../MenuButton';
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { CURRENCY } from '../../../../dataSets/CURRENCY';
-import { MenuButtonProps } from '../../../../types/button';
+import { CURRENCY } from '../../../../../dataSets/CURRENCY';
+import { MenuButtonProps } from '../../../../../types/button';
 
 export default {
     title: 'Buttons/MenuItemButton',

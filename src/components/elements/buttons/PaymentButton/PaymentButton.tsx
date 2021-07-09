@@ -1,7 +1,7 @@
-import { PaymentMethodButton } from '../../../types/paymentMethod';
+import { PaymentMethodButton } from '../../../../types/paymentMethod';
 
-import { capitalize } from '../../../utils/stringUtils';
-import useIcons from '../../../hooks/useIcons';
+import { capitalize } from '../../../../utils/stringUtils';
+import useIcons from '../../../../hooks/useIcons';
 
 import Button from '../Button';
 import Icon from '../../icons/Icon';

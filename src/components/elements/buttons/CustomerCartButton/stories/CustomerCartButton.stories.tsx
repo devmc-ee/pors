@@ -1,4 +1,4 @@
-import CustomerCartButton from '../.';
+import CustomerCartButton from '..';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
 export default {

@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { CheckoutButton } from '.';
-import useOrderData from '../../../hooks/useOrderData';
+import useOrderData from '../../../../hooks/useOrderData';
 
-import PaymentSelect from '../../sets/PaymentSelect/PaymentSelect';
-import ModalWindow from '../../portals/ModalWindow';
+import PaymentSelect from '../../../sets/PaymentSelect/PaymentSelect';
+import ModalWindow from '../../../portals/ModalWindow';
 import { useTranslation } from 'react-i18next';
 
 const CheckoutTotalButton = (): JSX.Element => {

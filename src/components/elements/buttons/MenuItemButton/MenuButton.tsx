@@ -1,4 +1,4 @@
-import { MenuButtonProps } from '../../../types/button';
+import { MenuButtonProps } from '../../../../types/button';
 import { InlineIcon } from '@iconify/react';
 import shoppingCartOutline from '@iconify/icons-eva/shopping-cart-outline';
 

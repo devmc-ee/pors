@@ -1,7 +1,7 @@
 import { MouseEvent } from 'react';
 import { CASH_KEYBOARD } from '../../../dataSets/CASH_KEYBOARD';
 import { KeyboardValue } from '../../../types/cashKeyBoard';
-import CashButton from '../../buttons/CashButton';
+import CashButton from '../../elements/buttons/CashButton';
 
 const CashKeyboard = (): JSX.Element => {
     const onClick = (event: MouseEvent<HTMLButtonElement>) => {

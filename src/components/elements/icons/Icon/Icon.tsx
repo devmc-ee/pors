@@ -1,4 +1,4 @@
-import useIcons from '../../../hooks/useIcons';
+import useIcons from '../../../../hooks/useIcons';
 
 interface IconProps {
     name: string;
