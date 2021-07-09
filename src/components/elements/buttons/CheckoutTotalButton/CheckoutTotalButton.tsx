@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { CheckoutButton } from '.';
 import useOrderData from '../../../../hooks/useOrderData';
 
-import PaymentSelect from '../../../sets/PaymentSelect/PaymentSelect';
+import PaymentSelect from '../../../blocks/PaymentSelect/PaymentSelect';
 import ModalWindow from '../../../portals/ModalWindow';
 import { useTranslation } from 'react-i18next';
 

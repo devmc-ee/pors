@@ -1,6 +1,6 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import { PAYMENT_SELECT } from './components/sets/PaymentSelect/PaymentSelect.i18n';
+import { PAYMENT_SELECT } from './components/blocks/PaymentSelect/PaymentSelect.i18n';
 
 const resources = {
 	en: {
