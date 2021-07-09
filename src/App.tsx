@@ -5,7 +5,7 @@ import CustomerCartButton from './components/elements/buttons/CustomerCartButton
 import CheckoutTotalButton from './components/elements/buttons/CheckoutTotalButton';
 
 import './App.css';
-import OrderList from './components/sets/OrderList';
+import OrderList from './components/blocks/OrderList';
 
 function App(): JSX.Element {
     const keyboard = MENU.map((item) => <MenuItemButton key={item.code} {...item} />);
