@@ -1,8 +1,8 @@
 import MainPage from './pages/MainPage';
-import MenuItemButton from './components/sharedElements/buttons/MenuItemButton';
+import MenuItemButton from './components/shared/buttons/MenuItemButton';
 import { MENU } from './__mock_data__/MENU';
-import CustomerCartButton from './components/sharedElements/buttons/CustomerCartButton';
-import CheckoutTotalButton from './components/sharedElements/buttons/CheckoutTotalButton';
+import CustomerCartButton from './components/shared/buttons/CustomerCartButton';
+import CheckoutTotalButton from './components/shared/buttons/CheckoutTotalButton';
 
 import './App.css';
 import OrderList from './components/blocks/OrderList';

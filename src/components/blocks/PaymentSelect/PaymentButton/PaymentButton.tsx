@@ -3,8 +3,8 @@ import { PaymentMethodButton } from '../../../../types/paymentMethod';
 import { capitalize } from '../../../../utils/stringUtils';
 import useIcons from '../../../../hooks/useIcons';
 
-import Button from '../Button';
-import Icon from '../../icons/Icon';
+import Button from '../../../shared/buttons/Button';
+import Icon from '../../../shared/icons/Icon';
 
 const PaymentButton = ({ type, name, description, onClick }: PaymentMethodButton): JSX.Element => {
     const iconName = !!type ? capitalize(type) : false;

@@ -1,9 +1,9 @@
 import { PaymentMethod } from '../../../types/paymentMethod';
-import PaymentButton from '../../sharedElements/buttons/PaymentButton';
+import PaymentButton from './PaymentButton';
 import styles from './PaymentSelect.module.css';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import ModalWindow from '../../portals/ModalWindow';
+import ModalWindow from '../../shared/portals/ModalWindow';
 
 const PAYMENT_METHODS: PaymentMethod[] = [
     {
