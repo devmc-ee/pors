@@ -1,4 +1,4 @@
-import * as Icons from '../components/elements/icons/icons';
+import * as Icons from '../components/sharedElements/icons/icons';
 
 const useIcons = (): UseIconsReturnType => {
     const getIcon = (name: string) => {

@@ -1,7 +1,7 @@
 import KeyBoard, { KeyboardProps } from '../KeyBoard';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { CURRENCY } from '../../../../dataSets/CURRENCY';
-import { MenuItem } from '../../../elements/buttons/MenuItemButton';
+import { MenuItem } from '../../../sharedElements/buttons/MenuItemButton';
 export default {
     title: 'KeyBoard',
     component: KeyBoard,

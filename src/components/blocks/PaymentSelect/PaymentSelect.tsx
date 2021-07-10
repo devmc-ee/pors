@@ -1,5 +1,5 @@
 import { PaymentMethod } from '../../../types/paymentMethod';
-import PaymentButton from '../../elements/buttons/PaymentButton';
+import PaymentButton from '../../sharedElements/buttons/PaymentButton';
 import styles from './PaymentSelect.module.css';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';

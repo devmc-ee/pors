@@ -1,6 +1,6 @@
 import { cleanup, fireEvent, render, screen } from '@testing-library/react';
 import renderer from 'react-test-renderer';
-import Button, { IButton } from '../components/elements/buttons/Button';
+import Button, { IButton } from '../components/sharedElements/buttons/Button';
 
 const setUp = (props: IButton) => render(<Button {...props} />);
 
