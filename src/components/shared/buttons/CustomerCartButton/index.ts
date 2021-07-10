@@ -1,2 +1,1 @@
-import CustomerCartButton from './CustomerCartButton';
-export default CustomerCartButton;
+export { default } from './CustomerCartButton';
