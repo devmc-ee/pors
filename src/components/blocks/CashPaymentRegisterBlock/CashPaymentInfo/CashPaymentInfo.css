@@ -1,0 +1,15 @@
+.cash-payment-view {
+    width: 100%;
+}
+.cash-payment-view__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+
+    background-color: var(--app-payment-view--background-color);
+}
+.cash-payment-view__text-element {
+    font-weight: 600;
+    font-size: 2rem;
+    text-transform: uppercase;
+}

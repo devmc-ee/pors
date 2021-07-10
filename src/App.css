@@ -32,4 +32,6 @@
     --app-button-background__payment-method--card-hover: rgba(0, 64, 140, 0.8);
 
     --app-modal-window__background-color: #f9f9f9;
+
+    --app-payment-view--background-color: var(--app__main-color-white, #fff);
 }
