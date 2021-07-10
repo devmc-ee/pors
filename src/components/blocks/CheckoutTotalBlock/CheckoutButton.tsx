@@ -3,13 +3,14 @@ import { InlineIcon } from '@iconify/react';
 
 import shoppingCartOutline from '@iconify/icons-eva/shopping-cart-outline';
 
-import { CURRENCY } from '../../../../dataSets/CURRENCY';
+import { CURRENCY } from '../../../dataSets/CURRENCY';
 
 export interface CheckoutButtonProps {
     totalSum: string;
+    currency: string;
     onClick: () => void;
 }
-export const CheckoutButton = ({ totalSum, onClick }: CheckoutButtonProps): JSX.Element => {
+export const CheckoutButton = ({ totalSum, currency, onClick }: CheckoutButtonProps): JSX.Element => {
     const { t } = useTranslation();
 
     return (

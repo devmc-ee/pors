@@ -2,7 +2,7 @@ import MainPage from './pages/MainPage';
 import MenuItemButton from './components/shared/buttons/MenuItemButton';
 import { MENU } from './__mock_data__/MENU';
 import CustomerCartButton from './components/shared/buttons/CustomerCartButton';
-import CheckoutTotalButton from './components/shared/buttons/CheckoutTotalButton';
+import CheckoutTotalBlock from './components/blocks/CheckoutTotalBlock';
 
 import './App.css';
 import OrderList from './components/blocks/OrderList';
@@ -16,7 +16,7 @@ function App(): JSX.Element {
                 keyboard={<div>{keyboard}</div>}
                 customer={<CustomerCartButton />}
                 order={<OrderList />}
-                checkout={<CheckoutTotalButton />}
+                checkout={<CheckoutTotalBlock />}
             />
         </div>
     );

@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import { CheckoutButton } from '.';
-import useOrderData from '../../../../hooks/useOrderData';
+import useOrderData from '../../../hooks/useOrderData';
 
-import PaymentSelect from '../../../blocks/PaymentSelect/PaymentSelect';
-import ModalWindow from '../../portals/ModalWindow';
+import PaymentSelect from '../PaymentSelect/PaymentSelect';
+import ModalWindow from '../../shared/portals/ModalWindow';
 import { useTranslation } from 'react-i18next';
+import { CURRENCY } from '../../../dataSets/CURRENCY';
 
-const CheckoutTotalButton = (): JSX.Element => {
+const CheckoutTotalBlock = (): JSX.Element => {
     const { t } = useTranslation();
     const { totalSum } = useOrderData();
     const [payment, set] = useState(false);
@@ -16,7 +17,7 @@ const CheckoutTotalButton = (): JSX.Element => {
     };
     return (
         <>
-            <CheckoutButton totalSum={totalSum} onClick={handleClick} />
+            <CheckoutButton totalSum={totalSum} onClick={handleClick} currency={CURRENCY.EUR.symbol} />
             {payment && (
                 <ModalWindow
                     isOpen={!!payment}
@@ -31,4 +32,4 @@ const CheckoutTotalButton = (): JSX.Element => {
     );
 };
 
-export default CheckoutTotalButton;
+export default CheckoutTotalBlock;
