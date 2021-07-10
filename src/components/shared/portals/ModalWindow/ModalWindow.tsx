@@ -1,5 +1,5 @@
 import Portal from '../Portal';
-import { ReactComponent as CloseIcon } from '../../../assets/icons/close.svg';
+import { ReactComponent as CloseIcon } from '../../../../assets/icons/close.svg';
 import styles from './ModalWindow.module.css';
 interface ModalWindowProps {
     id: string;

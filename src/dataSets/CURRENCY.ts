@@ -1,4 +1,4 @@
-import { CurrencyType } from '../types/currency';
+import { CurrencyType } from '../types/CurrencyType';
 
 export const CURRENCY: CurrencyType = {
 	EUR: {
