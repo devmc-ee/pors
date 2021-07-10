@@ -3,11 +3,9 @@ import { InlineIcon } from '@iconify/react';
 
 import shoppingCartOutline from '@iconify/icons-eva/shopping-cart-outline';
 
-import { CURRENCY } from '../../../dataSets/CURRENCY';
-
 export interface CheckoutButtonProps {
     totalSum: string;
-    currency: string;
+    currency: string | null;
     onClick: () => void;
 }
 export const CheckoutButton = ({ totalSum, currency, onClick }: CheckoutButtonProps): JSX.Element => {
@@ -21,7 +19,7 @@ export const CheckoutButton = ({ totalSum, currency, onClick }: CheckoutButtonPr
             </div>
             <div className="button-pay-icon-value-wrapper">
                 <span className="button-pay-value button-inner-item"> {totalSum}</span>
-                <span className="button-pay-currency button-inner-item"> {CURRENCY.EUR.symbol}</span>
+                <span className="button-pay-currency button-inner-item"> {currency}</span>
             </div>
         </button>
     );
