@@ -1,7 +1,7 @@
 import MainPage from './pages/MainPage';
-import MenuItemButton from './components/shared/buttons/MenuItemButton';
+import MenuItemButton from './components/blocks/MenuItemButton';
 import { MENU } from './__mock_data__/MENU';
-import CustomerCartButton from './components/shared/buttons/CustomerCartButton';
+import CustomerCartButton from './components/blocks/CustomerCartButton';
 import CheckoutTotalBlock from './components/blocks/CheckoutTotalBlock';
 
 import './App.css';

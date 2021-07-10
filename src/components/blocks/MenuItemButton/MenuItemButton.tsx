@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
-import { addToCartAction } from '../../../../redux/actions/orderActions';
-import { MenuItemButtonType } from '../../../../types/button';
-import { AppState } from '../../../../redux/rootReducer';
+import { addToCartAction } from '../../../redux/actions/orderActions';
+import { MenuItemButtonType } from '../../../types/button';
+import { AppState } from '../../../redux/rootReducer';
 import { Dispatch } from 'redux';
 import MenuItem from './MenuButton';
 
