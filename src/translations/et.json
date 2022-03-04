@@ -1,0 +1,19 @@
+{
+    "paymentSelect": {
+        "header": "Klient maksab:",
+        "paymentMethodModal": {
+            "header": "Tasumine"
+        }
+    },
+    "checkoutButton": {
+        "label": "Tasumine"
+    },
+    "cashPaymentRegister": {
+        "dueTo": {
+            "label": "Tasumiseks"
+        },
+        "dueToChange": {
+            "label": "Due to change"
+        }
+    }
+}

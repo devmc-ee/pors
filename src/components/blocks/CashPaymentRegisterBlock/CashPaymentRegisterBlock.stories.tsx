@@ -6,6 +6,10 @@ export default {
     component: CashPaymentRegisterBlock,
 } as Meta;
 
-const Template: Story = () => <CashPaymentRegisterBlock />;
+const Template: Story = (args) => <CashPaymentRegisterBlock {...args} />;
 
 export const Default = Template.bind({});
+Default.args = {
+    dueToPayLabel: 'due To Pay',
+    dueToChangeLabel: 'due To Change',
+};

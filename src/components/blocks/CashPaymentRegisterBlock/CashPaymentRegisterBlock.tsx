@@ -1,8 +1,15 @@
+import { useTranslation } from 'react-i18next';
 import { BemStructure } from '../../../types/BemStructure';
 import { getBemClasses } from '../../../utils/classesUtils';
 import CashKeyboard from '../CashKeyboard';
+import CashPaymentInfo from './CashPaymentInfo';
 
-const CashPaymentRegisterBlock = () => {
+interface CashPaymentRegisterBlockProps {
+    dueToPayLabel?: string;
+    dueToChangeLabel?: string;
+}
+const CashPaymentRegisterBlock = ({ dueToPayLabel = '', dueToChangeLabel = '' }: CashPaymentRegisterBlockProps) => {
+    const { t } = useTranslation();
     const bem: BemStructure = {
         block: 'cash-payment-register-block',
         container: 'container',
@@ -16,13 +23,25 @@ const CashPaymentRegisterBlock = () => {
     };
     const classes = getBemClasses(bem);
 
+    const dueToPayArgs = {
+        labelText: !!dueToPayLabel ? dueToPayLabel : t('cashPaymentRegister.dueToPay.label'),
+        value: ' 10€',
+    };
+    const dueToChangeArgs = {
+        labelText: dueToChangeLabel? dueToChangeLabel: t('cashPaymentRegister.dueToChange.label'),
+        value: ' 10€',
+    };
     return (
         <div className={classes?.block}>
             <div className={classes?.container}>
                 <div className={`${classes?.paymentView} ${classes?.blockArea}`}>
-                    <div className={classes?.paymentViewDueTo}>paymentViewDueTo</div>
+                    <div className={classes?.paymentViewDueTo}>
+                        <CashPaymentInfo {...dueToPayArgs} />
+                    </div>
                     <div className={classes?.paymentViewCustomerPaid}>paymentViewCustomerPaid</div>
-                    <div className={classes?.paymentViewDueToChange}>paymentViewDueToChange</div>
+                    <div className={classes?.paymentViewDueToChange}>
+                        <CashPaymentInfo {...dueToChangeArgs} />
+                    </div>
                 </div>
                 <div className={`${classes?.paymentCashKeyboard} ${classes?.blockArea}`}>
                     <CashKeyboard />

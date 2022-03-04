@@ -1,0 +1,17 @@
+{
+    "header": "Customer pays with:",
+    "paymentMethodModal": {
+        "header": "Payment"
+    },
+    "checkoutButton": {
+        "label": "Payment"
+    },
+    "cashPaymentRegister": {
+        "dueToPay": {
+            "label": "Due to pay"
+        },
+        "dueToChange": {
+            "label": "Due to change"
+        }
+    }
+}
